@@ -5,7 +5,8 @@
         var empty_label, chainfield = "#id_" + $(item).attr("data-chainfield"),
             url = $(item).attr("data-url"),
             id = "#" + $(item).attr("id"),
-            value = JSON.parse($(item).attr("data-value")),
+	    value = $(item).attr("data-value"),
+            //value = JSON.parse($(item).attr("data-value")),
             auto_choose = $(item).attr("data-auto_choose");
         if ($(item).hasClass("chained-fk")) {
             empty_label = $(item).attr("data-empty_label");
