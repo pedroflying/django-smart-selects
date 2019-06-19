@@ -5,8 +5,12 @@
         var empty_label, chainfield = "#id_" + $(item).attr("data-chainfield"),
             url = $(item).attr("data-url"),
             id = "#" + $(item).attr("id"),
-            value = $.parseJSON($(item).attr("data-value")),
+            value = $(item).attr("data-value"),
             auto_choose = $(item).attr("data-auto_choose");
+
+        // do we need to parse json?
+        console.log(value);
+
         if ($(item).hasClass("chained-fk")) {
             empty_label = $(item).attr("data-empty_label");
             chainedfk.init(chainfield, url, id, value, empty_label, auto_choose);
